@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <name>Guiced Persistence - EclipseLink Properties</name>
-    <description>Reads EclipseLink properties from a persistence.xml file
+    <description>Reads EclipseLink properties from a persistence.xml file for the Guice Persist framework
     </description>
     <url>https://github.com/GedMarc/GuicedPersistence-EclipseLinkProperties</url>
 
