@@ -12,6 +12,7 @@ public class TestDBPrivateModule
 		extends AbstractDatabaseProviderModule
 {
 
+	@NotNull
 	@Override
 	protected String getPersistenceUnitName()
 	{
@@ -24,12 +25,14 @@ public class TestDBPrivateModule
 		return new JPAConnectionBaseInfo().setPersistenceUnitName(unit.getName());
 	}
 
+	@NotNull
 	@Override
 	protected String getJndiMapping()
 	{
 		return "jdbc/jndi";
 	}
 
+	@NotNull
 	@Override
 	protected Class<? extends Annotation> getBindingAnnotation()
 	{
