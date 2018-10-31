@@ -4,7 +4,7 @@ import com.jwebmp.guicedpersistence.services.PropertiesConnectionInfoReader;
 import com.jwebmp.guicedpersistence.services.PropertiesEntityManagerReader;
 
 module com.jwebmp.guicedpersistence.readers.eclipselink {
-	requires com.jwebmp.guicedpersistence;
+	requires transitive com.jwebmp.guicedpersistence;
 
 	provides PropertiesConnectionInfoReader with EclipseLinkDefaultConnectionBaseBuilder;
 	provides PropertiesEntityManagerReader with EclipseLinkPropertiesReader;
