@@ -1,7 +1,7 @@
 package com.jwebmp.guicedpersistence.readers.eclipselink;
 
 import com.jwebmp.guicedpersistence.db.ConnectionBaseInfo;
-import com.jwebmp.guicedpersistence.services.PropertiesConnectionInfoReader;
+import com.jwebmp.guicedpersistence.services.IPropertiesConnectionInfoReader;
 import com.oracle.jaxb21.PersistenceUnit;
 
 import java.util.Properties;
@@ -9,11 +9,11 @@ import java.util.Properties;
 /**
  * A default connection string builder for H2 Databases
  */
-public class EclipseLinkDefaultConnectionBaseBuilder
-		implements PropertiesConnectionInfoReader
+public class EclipseLinkDefaultConnectionBaseBuilderI
+		implements IPropertiesConnectionInfoReader
 {
 	/**
-	 * @see com.jwebmp.guicedpersistence.services.PropertiesConnectionInfoReader#populateConnectionBaseInfo(PersistenceUnit, Properties, ConnectionBaseInfo)
+	 * @see com.jwebmp.guicedpersistence.services.IPropertiesConnectionInfoReader#populateConnectionBaseInfo(PersistenceUnit, Properties, ConnectionBaseInfo)
 	 */
 	@Override
 	public ConnectionBaseInfo populateConnectionBaseInfo(PersistenceUnit unit, Properties filteredProperties, ConnectionBaseInfo cbi)
