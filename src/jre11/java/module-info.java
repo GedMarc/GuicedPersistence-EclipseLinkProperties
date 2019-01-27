@@ -1,20 +1,12 @@
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.guicedpersistence.readers.eclipselink.EclipseLinkDefaultConnectionBaseBuilderI;
-import com.jwebmp.guicedpersistence.readers.eclipselink.EclipseLinkIPropertiesReader;
-import com.jwebmp.guicedpersistence.readers.eclipselink.EclipseModuleExclusions;
-import com.jwebmp.guicedpersistence.services.IPropertiesConnectionInfoReader;
-import com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader;
-
 module com.jwebmp.guicedpersistence.readers.eclipselink {
 	requires com.jwebmp.guicedpersistence;
 	requires com.jwebmp.guicedinjection;
 	requires java.validation;
 
-	provides IPropertiesConnectionInfoReader with EclipseLinkDefaultConnectionBaseBuilderI;
-	provides IPropertiesEntityManagerReader with EclipseLinkIPropertiesReader;
+	provides com.jwebmp.guicedpersistence.services.IPropertiesConnectionInfoReader with com.jwebmp.guicedpersistence.readers.eclipselink.EclipseLinkDefaultConnectionBaseBuilderI;
+	provides com.jwebmp.guicedpersistence.services.IPropertiesEntityManagerReader with com.jwebmp.guicedpersistence.readers.eclipselink.EclipseLinkIPropertiesReader;
 
-	provides IGuiceScanModuleExclusions with EclipseModuleExclusions;
-	provides IGuiceScanJarExclusions with EclipseModuleExclusions;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.guicedpersistence.readers.eclipselink.EclipseModuleExclusions;
+	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.guicedpersistence.readers.eclipselink.EclipseModuleExclusions;
 
 }
