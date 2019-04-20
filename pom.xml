@@ -23,26 +23,27 @@
         <dependency>
             <groupId>com.jwebmp.guicedee.persistence</groupId>
             <artifactId>guiced-persistence</artifactId>
+            <type>jar</type>
         </dependency>
 
         <dependency>
             <groupId>com.jwebmp.guicedee.persistence</groupId>
             <artifactId>guiced-persistence-jpa</artifactId>
             <scope>test</scope>
+            <type>jar</type>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.core</artifactId>
-            <version>2.7.3</version>
+            <type>jar</type>
         </dependency>
 
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <version>2.7.3</version>
+            <type>jar</type>
         </dependency>
-
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
